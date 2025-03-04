@@ -1,0 +1,216 @@
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* End of Resets */
+
+/* Variables */
+:root {
+    --black: black;
+    --white: white;
+    --green: #59D98E;
+    --darkGrey: #333;
+    --lightGrey: #555;
+}
+/* End of Variables */
+
+body {
+    font-size: 120%;
+    font-family: "Raleway", sans-serif;
+}
+
+#hero {
+    height: 100vh;
+    color: var(--white); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1579758629938-03607ccdbaba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+a {
+    color: var(--white); 
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--green);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    margin-bottom: 60px;
+    font-size: 200%;
+    max-width: 80%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.green {
+    color: var(--green);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 100%;
+    color: var(--black);
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+#overview {
+    display: flex;
+    padding: 2%;
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    background-image: linear-gradient(var(--white), var(--green));
+}
+
+.ticket {
+    height: 90%;
+    width: 30%;
+    background: var(--white); 
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img_ticket {
+    height: 70%;
+    width: 100%; 
+    object-fit: cover; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+h3 {
+    padding-top: 5%;
+    color: var(--darkGrey)
+}
+
+#motivation1 {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2% 4%;
+    border-bottom: 5px solid linear-gradient(to right, var(--green));
+}
+
+#motivation1 div {
+    text-align: left;
+    padding-right: 20px;
+}
+
+#motivation1 h2 {
+    color: var(--darkGrey);
+    text-transform: uppercase;
+}
+
+#motivation1 p {
+    color: var(--lightGrey);
+    line-height: 1.6;
+}
+
+#motivation1 img {
+    width: 70%;
+    height: 90%;
+    object-fit: cover;
+    box-shadow: 20px 20px rgba(89, 217, 142, 1);
+}
+
+#motivation2 {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4%;
+    padding-top: 2%;
+}
+
+#motivation2 div {
+    text-align: right;
+    padding-left: 20px;
+}
+
+#motivation2 h2 {
+    color: var(--darkGrey);
+    text-transform: uppercase;
+}
+
+#motivation2 p {
+    color: var(--lightGrey);
+    line-height: 1.6;
+}
+
+#motivation2 img {
+    width: 70%;
+    height: 90%;
+    object-fit: cover;
+    box-shadow: -20px 20px rgba(89, 217, 142, 1);
+}
+
+hr {
+    height: 10px;
+    background-image: linear-gradient(to right, var(--green), var(--white));
+    border: none;
+}
+
+#preloader {
+    background: white url(Walk.gif) no-repeat center center;
+    background-size: 5%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 800px) {
+    #overview {
+        height: fit-content;
+        flex-direction: column;
+    }
+    .ticket {
+        width: 90%;
+        margin: 10px;
+    }
+    #motivation1 {
+        height: fit-content;
+        flex-direction: column;
+    }
+    #motivation2 {
+        height: fit-content;
+        flex-direction: column-reverse;
+    }
+    #motivation1 h2, #motivation1 p, #motivation2 h2, #motivation2 p {
+        text-align: center;
+    }
+}
